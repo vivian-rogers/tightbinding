@@ -1,4 +1,4 @@
-
+#first, one should install WSL2, Vcxsrv, and windows terminal for unicode support
 
 #install julia & graphics
 

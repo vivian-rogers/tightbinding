@@ -26,14 +26,14 @@ function H(k)
 end
 
 
-klist = ["Γ", "M", "K", "K2", "K3", "K4", "Γ"]
+klist = ["Γ", "M", "K", "Γ"]
 nk = 1028
 println("Getting eigenvalues of graphene between k = ")
 show(klist)
 println("...")
-E = getBands(klist, nk, a, H)
+E, Estates = getBands(klist, nk, a, H)
 #display(27.2*E)
 println("Plotting...")
-plotBands(klist,nk,27.2*E)
+plotBands(klist,nk,E)
 println("Done! Press ctrl+d to quit")
 
