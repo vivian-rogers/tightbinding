@@ -8,8 +8,9 @@ sudo apt-get install julia
 sudo apt-get install qt5-default
 
 echo "Adding display path to .bashrc"
-echo "export DISPLAY=\$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0\nunset LIBGL_ALWAYS_INDIRECT" >> ~/.bashrc
-
+echo "export DISPLAY=\$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0" >> ~/.bashrc
+echo "unset LIBGL_ALWAYS_INDIRECT" >> ~/.bashrc
+source ~/.bashrc
 
 echo "Installing necessary julia packages..."
 julia << EOF
