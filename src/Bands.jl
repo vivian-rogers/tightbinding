@@ -55,8 +55,8 @@ function getBands(klist, n, a, Hofk) #takes in array of kpt strings, number of i
 		H = Hofk(k)
 		#Eofk, Estatek = eigs(Hermitian(H))
 		#Eofk, Estatek = eigen(H)
-		#Eofk, Estatek = eigen(Hermitian(H))
-		Eofk, Estatek = eig(H,1E-12)
+		Eofk, Estatek = eigen(Hermitian(H))
+		#Eofk, Estatek = eig(H,1E-12)
 		#Eofk = eigvals(H)
 		for iE in 1:nE
 			Evals[ik,iE] = real(Eofk[iE]) 

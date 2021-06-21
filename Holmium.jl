@@ -17,7 +17,7 @@ klist = ["Γ","M","K","Γ"] 	#passes them to Bands, which matches them with nume
 				#double-check values of kpoints in band plotting routine in src/Bands.jl if bands look weird
 nk = 400 			#number of kpoints between given high-sym points
 proj = false #project eigenstate onto given basis vector? might be broken, disregard
-projKet = [1;0]⊗[1; 0]⊗[1;0] #projects onto orbital |a>⊗|↑> + |a>⊗|↓>
+projKet = [1;1]⊗[1; 0]⊗[1;0] #projects onto orbital |a>⊗|↑> + |a>⊗|↓>
 
 function H(k)
 	
@@ -84,8 +84,7 @@ end
 #	0 0          c
 #    ]
 #display(A)
-
-println("\nVolume = $(det(A)) m^3")
+#println("\nVolume = $(det(A)) m^3")
 println("Getting eigenvalues of holmium between k = ")
 show(klist)
 println("...")
