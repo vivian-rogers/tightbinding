@@ -6,6 +6,8 @@ echo "Installing Julia programming language, QT for graphics"
 sudo apt-get install julia
 sudo apt-get install qt5-default
 
+echo "Adding display path to .bashrc"
+echo "export DISPLAY=\$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0\nunset LIBGL_ALWAYS_INDIRECT" >> ~/.bashrc
 
 
 echo "Installing necessary julia packages..."
@@ -23,3 +25,6 @@ cd ~/.vim
 mkdir -p pack/plugins/start && cd pack/plugins/start
 git clone git://github.com/JuliaEditorSupport/julia-vim.git
 
+
+echo "Install done (if run without errors), launch Vcxsrv with -1, default settings, and type"
+echo "'julia -i Holmium.jl'"
