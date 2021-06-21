@@ -3,6 +3,7 @@
 #install julia & graphics
 
 echo "Installing Julia programming language, QT for graphics"
+sudo apt-get update
 sudo apt-get install julia
 sudo apt-get install qt5-default
 
@@ -26,5 +27,5 @@ mkdir -p pack/plugins/start && cd pack/plugins/start
 git clone git://github.com/JuliaEditorSupport/julia-vim.git
 
 
-echo "Install done (if run without errors), launch Vcxsrv with -1, unclick native openGL, and type"
-echo "'julia -i Holmium.jl'"
+echo "Install done (if run without errors), launch Vcxsrv with -1, unclick native openGL,"
+echo "click disable access control (so wsl2 can use it), and type 'julia -i Holmium.jl'"
